@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#bar">Bar Chart</a> <a class="navbar-brand" href="#bubble">Bubble Chart</a>
+    </nav>
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4">
+              <h3>From Bacteria to Beef <br> <small>Plotly & Belly Button Biodiversity</small></h3>
+          </div>
+          <div class="col-md-8">
+              <p>
+                A microbiology laboratory has a biological research project where the goal is to discover and document bacterial species that can synthesize proteins that taste like beef. The laboratory has partnered with Improbable Beef, a food project to research candidate species where a microorganism can supply the best taste. 
+                <br><br>Roza, a laboratory researcher, believes this microorganism can be found from bacteria on the human belly button to make synthetic beef. Roza has sampled the navels of volunteers to identify bacterial species that colonize a belly button. Each person’s identity is anonymous, so they have been assigned an ID number. 
+                <br><br>On this dashboard the dropdown menu lists the ID numbers of all the volunteers. When a volunteer ID is chosen, that person's demographics information, such as location, sex, and age, will be displayed, the bar and bubble charts display information about the bacterial species live in their navel.
+    
+              </p>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5><b>Test Subject ID:</b></h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+          &nbsp;
+      </div>
+      <div class="col-md-5">
+         <p>The horizontal bar chart displays the top 10 bacterial species (OTUs) found in the volunteer’s navel identified with the ID number.</p>
+      </div>
+      <div class="col-md-5">
+         <p>The gauge chart displays the weekly belly button washing frequency's value and display the value as a measure from 0-10 on the progress bar.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+          &nbsp;
+      </div>
+      <div class="col-md-5">
+         <p>The bubble chart depicts the relationships between the bacterial species (OTUs), and sample values found in the volunteer’s navel.</p>
+      </div>
+      <div class="col-md-5">
+         &nbsp;
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
