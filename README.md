@@ -10,3 +10,7 @@ On this dashboard the dropdown menu lists the ID numbers of all the volunteers. 
 <a href="https://dortegas.github.io/" >Belly Button Biodiversity Dashboard</a>
 
 ## Resources
+  - Language: JavaScript
+  - Development tool: VS Code and Google DevTools 
+  - Web Design tools: HTML5, Bootstrap 3 and CSS
+  - Data source: samples.json
